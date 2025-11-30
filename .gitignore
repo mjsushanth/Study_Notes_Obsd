@@ -1,0 +1,6 @@
+# Ignore all Obsidian app state and plugins (contains secrets)
+.obsidian/
+
+# Optional: OS noise
+.DS_Store
+Thumbs.db
