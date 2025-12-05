@@ -83,6 +83,15 @@ SGHMC adds a momentum variable that turns the dynamics from a simple random walk
 
 The “SGD looks Bayesian” story comes from noticing that **vanilla SGD with constant step size already behaves like a sloppy SGHMC variant**: minibatch gradients introduce noise with nontrivial covariance, and inertia from previous updates creates an effective momentum. Under certain approximations, this can be interpreted as sampling from a tempered posterior concentrated near wide minima. This view doesn’t magically make SGD a good sampler, but it offers a unifying language: the same algorithm that optimizes your network is also implicitly defining a prior (through architecture), a likelihood (through loss), and a sampling temperature (through learning rate and batch size). Thinking in those terms makes design decisions—batch size, LR schedule, choice of optimizer—feel less like folklore and more like crude control over the shape and temperature of an implicit posterior.
 
+
+- **Langevin noise** is the deliberate random “jitter” you add to gradient updates so that they stop behaving like pure optimization and start behaving like a **random walk guided by the posterior**
+- Vanilla SGD already has some randomness because you use minibatches, but that noise is messy and not calibrated. In Langevin-style methods (SGLD/SGHMC), you add Gaussian noise whose scale is tied to the learning rate.
+- In plain SGD, you always take a step exactly opposite to the gradient (plus minibatch noise you didn’t design).
+- Intuitively, the gradient pulls you toward regions where the posterior is high, while the noise lets you jostle around in those regions instead of freezing at a single point.
+- Temperature is the knob that controls how “adventurous” those noisy dynamics are. At temperature T = 1 you target the true posterior: peaks are high and valleys are deep, and your sampler strongly prefers high-probability regions while still wandering a bit.
+- The “Hamiltonian noisy system” picture in SGHMC is about adding momentum and friction so the trajectory has inertia instead of making jittery, purely Brownian moves. You imagine parameters θ and momenta p evolving together: gradients push on p (like forces), p moves θ along trajectories, friction slowly drains energy, and injected noise kicks energy back in.
+
+
 ---
 
 ## 6) Learning dynamics, margins, and implicit priors

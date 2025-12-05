@@ -312,3 +312,23 @@ Understanding δ, locality, and relative encoding helps with:
 This is deep reusable intuition across all ML subdomains.
 
 
+---
+
+## TLDR;
+
+“On the Relationship between Self-Attention and Convolutional Layers” is such a good read. Every ML/AI engineer or student should try reading it. It gives a very good picture of conv vs self-attention, positional encodings, the δ trick, and why attention is a strict superset of convolution.  
+  
+We start by understanding that δ expresses **relative location**, independent of the absolute index. A convolution kernel is literally a dictionary:  
+> “For each relative offset δ in this small patch, here is the weight I apply to the neighbor at that offset.”  
+  
+If you trace the change of variables `k = q + δ`, δ just means “the neighbor at offset δ from my current position q.” That’s exactly how convolution encodes locality and translation equivariance.  
+  
+Self-attention keeps the same overall form – a **weighted average of neighbors** – but drastically generalizes how the weights are chosen. By rewriting attention in terms of `q` and `δ`, and by designing the attention weights `a_{q+δ}` and the value transform `V`, we can interpret self-attention's behaviour like a convolution: in the conv-like case, `a_{q+δ} ≈` “something that depends only on δ.”  
+  
+More generally, the attention weight for the δ-th neighbor becomes a function of δ via a learned **relative positional embedding** `r_δ`, instead of depending on absolute position q. That’s the key step that makes convolution a special case of attention. CNN is one “hard-coded region” inside the attention universe.  
+  
+Credits: I’m especially grateful for [Julia Turc](https://www.linkedin.com/in/iulia-raluca-turc/)’s explanations of this topic. Their videos made the visual–math picture click and made the original research paper feel far less intimidating. Strongly recommended if you want to deepen your intuition for deep learning architectures:  
+  
+* [https://lnkd.in/gyymYQjU](https://lnkd.in/gyymYQjU)  
+* [https://lnkd.in/gS3GEnYF](https://lnkd.in/gS3GEnYF)  
+* [https://lnkd.in/gNaDTdnJ](https://lnkd.in/gNaDTdnJ)
