@@ -194,14 +194,3 @@ Give me a 2×2 matrix: /Data Scale: Small/Large/ × /Query Complexity: Simple/Co
 
 ---
 
-## How to Use This Questionnaire
-
-**For Deep Learning:**
-
-- Try to answer each question in writing BEFORE looking up the answer
-- Grade yourself: "Confident" / "Partial Understanding" / "No Idea"
-- Focus your minilab experiments on your "No Idea" zones
-
-- Pick 5 questions you MOST want to answer via hands-on experiments
-- Design the minilab to viscerally demonstrate those answers
-- Rest become research/reading goals
