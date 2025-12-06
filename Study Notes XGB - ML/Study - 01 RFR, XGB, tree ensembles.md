@@ -227,25 +227,20 @@ It is _point regression forecasting_.
 # 4. Intuition: what the model “learns” from  signal
 
 ### (1) Seasonal cycles
-
 RF sees that ~36 steps back encode a pattern that often repeats.  
 Trees split on these periodic structures.
 
 ### (2) Trend
-
 If values slowly increase over months, RF picks up monotonicities.
 
 ### (3) Noise smoothing
-
-Trees average noisy samples → predictions look smoother than the true signal.
+Trees average noisy samples→predictions look smoother than the true signal.
 
 ### (4) Local regime behavior
-
 Because  synthetic data has weather regimes (warm → warm, cool → cool),  
 RF learns state-dependent behavior.
 
 ### (5) Phase-shifted structure
-
 Different lag positions (t−5), (t−12), (t−24) encode oscillation phases → RF splits on these.
 
 ---
