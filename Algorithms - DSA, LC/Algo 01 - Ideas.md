@@ -2,7 +2,19 @@
 Short version:
 You’ll remember and “see through” LeetCode only if you stop treating each problem as a one-off puzzle and start encoding it the same way you’ve been encoding theory: as **mental models + key objects + algorithmic flows + invariants**, organized by **patterns** and rehearsed with **active recall**.
 
-Let me structure this in the same style you like.
+
+
+fundamentals will be stable enough to begin:
+- sliding window
+- hashing patterns
+- two-pointers
+- stack/queue
+- prefix sums
+- binary search
+- recursion/backtracking
+- matrix traversal
+- heap + greedy
+- dynamic programming templates
 
 ---
 
