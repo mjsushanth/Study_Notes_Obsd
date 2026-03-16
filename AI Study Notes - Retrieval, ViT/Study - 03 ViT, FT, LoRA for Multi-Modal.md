@@ -280,6 +280,11 @@ https://www.linkedin.com/posts/aayush-sugandh-785181190_i-worked-out-the-math-be
 
 ---
 
+
+![[Pasted image 20260121215513.png]]
+
+
+![[Pasted image 20260121215545.png]]
 ## **Summary Mental Model**
 
 - **Transformers = geometry machines.**

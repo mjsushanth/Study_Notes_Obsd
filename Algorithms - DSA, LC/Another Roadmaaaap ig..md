@@ -46,3 +46,6 @@ Evening (2 hrs):
 
 
 
+![[Pasted image 20260207035438.png]]
+
+

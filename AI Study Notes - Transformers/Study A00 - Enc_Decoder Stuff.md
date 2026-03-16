@@ -1,8 +1,10 @@
 
-  
+
+--- 
+
 Architectures and training methods vary widely between LLMs (and SLMs). But what most modern language models have in common is that they are based on the transformer architecture. And when it comes to pre-training modern LLMs, there are two key architectures that stand out: encoder-based models and decoder-based models. They’re each good at different types of tasks and that’s because they are trained differently.  
   
-⭐️ Encoder-based models focus on language understanding and generally tend to be smaller. These models are trained on Masked Language Modeling (MLM) tasks. Here’s how it works:  
+Encoder-based models focus on language understanding and generally tend to be smaller. These models are trained on Masked Language Modeling (MLM) tasks. Here’s how it works:  
   
 1. A percentage of the input tokens in the sequence are randomly blanked out.  
 The encoder processes the corrupted sequence, generating contextual embeddings for every token, including the masked ones.  
@@ -21,6 +23,14 @@ Learning how a model is trained is imperative to understanding which tasks it’
   
 Encoder vs. Decoder vs. Encoder-Decoder Models [Aman Chadha]  
 🔗: [https://lnkd.in/g5bm3hhc](https://lnkd.in/g5bm3hhc)  
-  
 Understanding Encoder And Decoder LLMs [Sebastian Raschka]  
 🔗: [https://lnkd.in/gjkvXi68](https://lnkd.in/gjkvXi68)
+
+---
+
+
+- Precisely. In cross-attention, the query (Q) comes from the decoder and asks “What information do I need?”, the key (K) from the encoder represents “What information do we have?”, and the value (V) provides the actual content to generate the output based on how well the query matches the key.
+
+![[Pasted image 20260212140619.png]]
+
+- Simple reason: mask so that we dont look at future context and prevent cheating, because we dont want access to future words or tokens. Only prior.
