@@ -1,0 +1,21 @@
+
+- Explain the complete RAG architecture. How would you build it from scratch?  
+- What are embeddings? Which embedding models have you used, and how do you choose one?  
+- Compare vector databases such as Pinecone, Chroma, FAISS, Milvus, and Weaviate.  
+- Difference between LangChain, LlamaIndex, LangGraph, and CrewAI. When would you choose each?  
+- Explain AI Agents, multi-agent systems, and supervisor-agent architecture.  
+- What is function calling/tool calling? How is it implemented in OpenAI or LangChain?  
+- What is MCP (Model Context Protocol)? Why is it gaining popularity?  
+- How do you optimize LLM latency and reduce inference costs?  
+- Explain prompt engineering techniques such as Zero-shot, Few-shot, Chain of Thought, Self-Consistency, ReAct, and Tree of Thoughts.  
+- How do you evaluate an LLM application? Explain RAGAS, DeepEval, Precision, Faithfulness, Context Precision, and Answer Relevancy.  
+- How do you prevent hallucinations in a RAG application?  
+- Explain chunking strategies: Fixed, Recursive, Semantic, Parent-Child, and Hybrid Chunking.  
+- What are MMR (Maximum Marginal Relevance) and RRF (Reciprocal Rank Fusion)?  
+- What is KV Cache? Explain speculative decoding and continuous batching.  
+- Difference between synchronous, asynchronous, multithreading, multiprocessing, and parallel processing in Python.  
+- Build a FastAPI endpoint to invoke an LLM asynchronously. Explain GET vs POST methods.  
+- How do you secure an enterprise GenAI application? Discuss PII masking, prompt injection, jailbreak protection, RBAC, guardrails, and content moderation.  
+- Explain LLM fine-tuning, LoRA, QLoRA, PEFT, and RLHF. When would you fine-tune instead of using RAG?  
+- How would you monitor an LLM application in production? Which metrics would you track?  
+- **System Design:** Design an enterprise chatbot that can answer questions from complex PDFs containing tables, images, scanned documents, and charts while ensuring accuracy, scalability, and security.
